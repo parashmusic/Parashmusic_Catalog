@@ -5,7 +5,7 @@ import VilakaWoff2 from '../assets/fonts/Vilaka-Regular.woff2';
 import VilakaFontWoff from '../assets/fonts/Vilaka-Regular.woff';
 const Navbar = () => {
   return (
-    <nav className="navbar fixed items-center justify-center lg:mx-10 mx-6">
+    <nav className="navbar sticky items-center justify-center lg:mx-10 mx-6">
          <style jsx global>{`
        
 

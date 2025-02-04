@@ -84,7 +84,7 @@ export default function TrackList({ onTrackSelect }) {
             <motion.p
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.9 }}
               className="text-sm text-gray-400"
             >
               {track.subtitle}

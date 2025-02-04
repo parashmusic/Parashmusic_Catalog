@@ -1,4 +1,4 @@
-import { useState, Suspense, lazy } from "react";
+import { useState, Suspense, lazy, useEffect } from "react";
 import {
   Facebook,
   Twitter,
@@ -29,6 +29,17 @@ export default function Home() {
     image: track2,
   });
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a loading delay
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // Adjust the time as needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const socialIcons = [
     { Icon: Instagram, link: "https://instagram.com/parash.wav" },
     { Icon: Spotify, link: "https://open.spotify.com/artist/1ScYtUsE8gkLCH7qsjWhGs" },
@@ -39,30 +50,21 @@ export default function Home() {
 
   return (
     <div className="max-w-full overflow-x-hidden">
+      {isLoading && <Loading />}
       <WrapEffect imageUrl={backgroundImage} />
       {/* Background */}
       <div className="fixed backdrop-blur-sm -z-10 inset-0">
-        {/* <div
-          className="absolute inset-0 
-            bg-[linear-gradient(rgba(255,255,255,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.03)_1px,transparent_1px)]
-            bg-[size:30px_30px] sm:bg-[size:80px_80px]"
-          style={{
-            WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 90%)",
-            maskImage: "radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 90%)",
-          }}
-        /> */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/01 via-black/100 to-black/70" />
       </div>
 
-      <div className="min-h-screen text-white relative">
+      <div className={`min-h-screen text-white relative ${isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-1000'}`}>
         <div className="fixed">
           <Spotlight />
           <Spotlight />
         </div>
         <div className="absolute">
-        <Navbar/>
+          <Navbar />
         </div>
-        
 
         {/* Main Content */}
         <main className="container mx-auto pt-32 pb-8 px-4 sm:px-6 lg:px-8">

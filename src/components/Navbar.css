@@ -1,0 +1,26 @@
+
+    button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    color: inherit;
+    font-family: 'Vilaka Font Demo Version', sans-serif;
+    font-size: 50px;
+    width: 100%;
+  }
+  
+  .navbar >h1 {
+    margin: 0 16px 0 0;
+    /* font-weight: 600; */
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 10%);
+    font-family: 'Vilaka Font Demo Version', sans-serif;
+    backdrop-filter: blur(10px);
+  }
+  
+  

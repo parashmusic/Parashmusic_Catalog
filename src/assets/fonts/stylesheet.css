@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'against';
+    src: url('against-Regular.eot');
+    src: url('against-Regular.eot?#iefix') format('embedded-opentype'),
+        url('against-Regular.woff2') format('woff2'),
+        url('against-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import TrackList from "./components/Track-list";
 import Loading from "./components/Loading";
+import LoadingImg from "./components/LoadingImg";
 import { Link } from "react-router-dom";
 import "./index.css";
 import track1 from "./assets/keteki_img.jpeg";
@@ -71,7 +72,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* 3D Scene */}
             <div className="h-[500px] sm:h-[400px] lg:h-[800px] relative overflow-hidden rounded-xl">
-              <Suspense fallback={<Loading />}>
+              <Suspense fallback={<LoadingImg />}>
                 <Scene3D imageUrl={currentTrack.image} />
               </Suspense>
             </div>

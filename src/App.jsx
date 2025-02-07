@@ -96,11 +96,11 @@ export default function Home() {
         </main>
 
         {/* Header */}
-        <header className="rounded-lg mx-auto max-w-md z-50 p-4 bg-black/30 backdrop-blur-md">
+        <footer className="rounded-lg mx-auto max-w-md mb-4 z-50 p-4 bg-black/30 backdrop-blur-md">
           <div className="container flex justify-center items-center">
             <div className="flex gap-4 items-center">
               <span className="hidden sm:inline-block text-sm text-gray-400">FOLLOW ME ON</span>
-              <div className="flex gap-2">
+              <div className="flex  gap-6 lg:gap-2">
                 {socialIcons.map(({ Icon, link }, index) => (
                   <a key={index} href={link} target="_blank" rel="noopener noreferrer">
                     <Icon
@@ -112,7 +112,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </header>
+        </footer>
       </div>
     </div>
   );

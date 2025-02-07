@@ -54,7 +54,7 @@ export default function Home() {
       {isLoading && <Loading />}
       <WrapEffect imageUrl={backgroundImage} />
       {/* Background */}
-      <div className="fixed backdrop-blur-sm -z-10 inset-0">
+      <div className="fixed lg:backdrop-blur-sm -z-10 inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/01 via-black/100 to-black/70" />
       </div>
 
@@ -68,7 +68,7 @@ export default function Home() {
         </div>
 
         {/* Main Content */}
-        <main className="container mx-auto pt-32 pb-8 px-4 sm:px-6 lg:px-8">
+        <main className="container mx-auto pt-18 lg:pt-32 pb-8 px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8">
             {/* 3D Scene */}
             <div className="h-[500px] sm:h-[400px] lg:h-[800px] relative overflow-hidden rounded-xl">
